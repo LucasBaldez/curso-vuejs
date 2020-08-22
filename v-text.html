@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-text</title>
+</head>
+<body>
+    <div id="directives">
+        
+        <!-- Essas duas formas funcionam do mesmo jeito -->
+
+        <h4>{{ name }}</h4>        
+        <h4 v-text="name"></h4>
+
+    </div>
+
+    <script src="vue.js"></script>
+    
+    <script>
+        let app = new Vue({
+            el: "#directives",
+            data: {
+              name: 'Lucas Baldez'
+            }
+        })
+    </script>
+
+</body>
+</html>
