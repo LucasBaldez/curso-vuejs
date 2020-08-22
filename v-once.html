@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-once</title>
+</head>
+<body>
+    <div id="directives">
+         
+       <!-- A Diretiva v-once apresenta a propriedade do vue apenas 
+        "uma vez", ou seja o elemento fica estático. 
+        Quando for tentar alterar a propriedade age o valor não será alterado na div.
+        Essa diretiva é muito boa para performance -->
+       <h1>{{ person.name }}</h1>
+       <div v-once>{{ person.age }}</div>
+        
+    </div>
+
+    <script src="vue.js"></script>
+    
+    <script>
+        let app = new Vue({
+            el: "#directives",
+            data: {
+               person:{
+                   name: "Lucas Baldez",
+                   age: 28
+               }
+            }
+        })
+    </script>
+
+</body>
+</html>
